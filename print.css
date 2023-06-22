@@ -1,0 +1,29 @@
+@page {
+	size: A4 landscape;
+}
+
+body *:not(.print) {
+	display: none;
+}
+
+.print span {
+	display: inline-block;
+	height: 100%;
+	width: calc(50% - 2px);
+
+	background-repeat: no-repeat;
+	background-size: contain;
+	-webkit-print-color-adjust: exact;
+	print-color-adjust: exact;
+
+	&:nth-child(even) {
+		page-break-after: always;
+		break-after: page;
+		background-position: left center;
+		margin-left: 2px;
+	}
+	&:nth-child(odd) {
+		background-position: right center;
+		margin-right: 2px;
+	}
+}

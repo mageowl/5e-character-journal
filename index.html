@@ -1,0 +1,161 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>5e Character Journal</title>
+		<link rel="stylesheet" href="styles.css" media="screen" />
+		<link rel="stylesheet" href="print.css" media="print" />
+	</head>
+	<body>
+		<div class="paper bg"></div>
+		<div class="paper primary"><img src="pages/page-01.png" /></div>
+
+		<div id="form">
+			<span class="watermark">Made by MageOwL</span>
+
+			<div class="panel selected center" data-page="pages/page-01">
+				<h1>5e Character Journals</h1>
+				<h4>A tool for making better character sheets.</h4>
+				<button class="next primary">Begin <span>-></span></button>
+			</div>
+
+			<div id="01" class="panel" data-page="pages/page-02">
+				<h2>General Information</h2>
+				<p>Basic statistics for your character</p>
+				<span>
+					<input type="checkbox" id="01-enabled" checked />
+					<label for="01-enabled">Enabled</label>
+				</span>
+				<button class="next last">Next <span>-></span></button>
+			</div>
+
+			<div id="02" class="panel" data-page="pages/page-03">
+				<h2>Reference Information</h2>
+				<p>Roleplay and combat information</p>
+				<span>
+					<input type="checkbox" id="02-enabled" checked />
+					<label for="02-enabled">Enabled</label>
+				</span>
+				<button class="next last">Next <span>-></span></button>
+			</div>
+
+			<div id="03" class="panel" data-page="pages/page-04">
+				<h2>Features and Traits</h2>
+				<p>Class features, feats, and other abilities</p>
+				<span>
+					<input type="checkbox" id="03-enabled" checked />
+					<label for="03-enabled">Enabled</label>
+				</span>
+				<span>
+					<input
+						type="number"
+						id="03-quantity"
+						min="0"
+						value="1"
+						data-disabler="03-enabled"
+					/>
+					<label for="03-quantity">Quantity</label>
+				</span>
+				<button class="next last">Next <span>-></span></button>
+			</div>
+
+			<div id="04" class="panel" data-page="pages/page-05">
+				<h2>Equipment</h2>
+				<p>Weapons and magic items</p>
+				<span>
+					<input type="checkbox" id="04-enabled" checked />
+					<label for="04-enabled">Enabled</label>
+				</span>
+				<span>
+					<input
+						type="number"
+						id="04-quantity"
+						min="0"
+						value="1"
+						data-disabler="04-enabled"
+					/>
+					<label for="04-quantity">Quantity</label>
+				</span>
+				<button class="next last">Next <span>-></span></button>
+			</div>
+
+			<div id="05" class="panel" data-page="pages/page-06">
+				<h2>Inventory</h2>
+				<p>Things that are not weapons</p>
+				<span>
+					<input type="checkbox" id="05-enabled" checked />
+					<label for="05-enabled">Enabled</label>
+				</span>
+				<span>
+					<input
+						type="number"
+						id="05-quantity"
+						min="0"
+						value="1"
+						data-disabler="05-enabled"
+					/>
+					<label for="05-quantity">Quantity</label>
+				</span>
+				<button class="next last">Next <span>-></span></button>
+			</div>
+
+			<div id="06" class="panel" data-page="pages/page-07">
+				<h2>Backstory</h2>
+				<p>A story set before the campaign</p>
+				<span>
+					<input type="checkbox" id="06-enabled" checked />
+					<label for="06-enabled">Enabled</label>
+				</span>
+				<span>
+					<input
+						type="number"
+						id="06-quantity"
+						min="0"
+						value="1"
+						data-disabler="06-enabled"
+					/>
+					<label for="06-quantity">Quantity</label>
+				</span>
+				<span>
+					<input
+						type="checkbox"
+						id="06-alt"
+						checked
+						data-disabler="06-enabled"
+					/>
+					<label for="06-alt">Include space for drawing</label>
+				</span>
+				<button class="next last">Next <span>-></span></button>
+			</div>
+
+			<div id="07" class="panel" data-page="pages/page-08.0">
+				<h2>Spellcasting</h2>
+				<p>Includes a spell list. Draw your own icons for each spell.</p>
+				<span>
+					<input type="checkbox" id="07-enabled" checked />
+					<label for="07-enabled">Enabled</label>
+				</span>
+				<span>
+					<input
+						type="number"
+						id="07-levels"
+						max="9"
+						value="9"
+						data-disabler="07-enabled"
+					/>
+					<label for="07-levels">Spell Levels</label>
+				</span>
+				<button class="next last primary">Print <span>-></span></button>
+			</div>
+
+			<div class="panel center" data-page="@print">
+				<h2>Printing...</h2>
+				<h4>Make sure to use double-sided printing. (flip on short edge)</h4>
+			</div>
+		</div>
+
+		<div id="pages" class="print"></div>
+
+		<script src="main.js"></script>
+	</body>
+</html>
