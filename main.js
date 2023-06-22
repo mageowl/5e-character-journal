@@ -87,8 +87,14 @@ function flip() {
 		nextPanel.classList.add("selected");
 
 		const img = page.querySelector("img");
-		img.style.opacity = 1;
 		img.src = nextPanel.dataset.page + ".png";
+		img.addEventListener(
+			"load",
+			() => {
+				img.style.opacity = 1;
+			},
+			{ once: true }
+		);
 	}, 200);
 }
 

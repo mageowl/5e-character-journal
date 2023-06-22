@@ -9,5 +9,6 @@
 		"sash.hoverBorder": "#6b00be",
 		"tab.activeBorder": "#6b00be"
 	},
-	"peacock.color": "#4e008b"
+	"peacock.color": "#4e008b",
+	"liveServer.settings.port": 5501
 }
